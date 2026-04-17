@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CarManagerApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CarManagerApp.ViewModels"
+    xmlns:models="clr-namespace:CarManagerApp.Models"
+    x:DataType="viewmodels:VehiclesViewModel"
+    Title="{Binding Title}">
+
+    <Grid RowDefinitions="*, Auto" BackgroundColor="#0F1117">
+
+        <!-- Empty State -->
+        <VerticalStackLayout
+            Grid.Row="0"
+            IsVisible="{Binding IsNotBusy}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Spacing="12">
+            <VerticalStackLayout.Triggers>
+                <DataTrigger TargetType="VerticalStackLayout" Binding="{Binding Cars.Count}" Value="0">
+                    <Setter Property="IsVisible" Value="True" />
+                </DataTrigger>
+                <DataTrigger TargetType="VerticalStackLayout" Binding="{Binding Cars.Count}" Value="0">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </VerticalStackLayout.Triggers>
+        </VerticalStackLayout>
+
+        <!-- Loading Indicator -->
+        <ActivityIndicator
+            Grid.Row="0"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="#6C63FF"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <!-- Vehicles List -->
+        <CollectionView
+            Grid.Row="0"
+            ItemsSource="{Binding Cars}"
+            SelectionMode="None"
+            IsVisible="{Binding IsNotBusy}">
+
+            <CollectionView.Header>
+                <VerticalStackLayout Padding="20,28,20,8">
+                    <Label
+                        Text="My Garage"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="#FFFFFF" />
+                    <Label
+                        Text="{Binding Cars.Count, StringFormat='{0} vehicle(s) registered'}"
+                        FontSize="13"
+                        TextColor="#8A8FA8"
+                        Margin="0,4,0,0" />
+                </VerticalStackLayout>
+            </CollectionView.Header>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Spacing="12"
+                    Padding="40">
+                    <Label
+                        Text="🚗"
+                        FontSize="56"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="No vehicles yet"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#FFFFFF"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Tap the button below to add your first car."
+                        FontSize="14"
+                        TextColor="#8A8FA8"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Vehicle">
+                    <Border
+                        Margin="20,0"
+                        Padding="0"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 16">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#1E2235" Offset="0.0" />
+                                <GradientStop Color="#252A40" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                        <Grid Padding="20" ColumnDefinitions="Auto,*,Auto" ColumnSpacing="16">
+
+                            <!-- Car icon badge -->
+                            <Border
+                                Grid.Column="0"
+                                WidthRequest="52"
+                                HeightRequest="52"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 14"
+                                BackgroundColor="#6C63FF"
+                                VerticalOptions="Center">
+                                <Label
+                                    Text="🚗"
+                                    FontSize="22"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center" />
+                            </Border>
+
+                            <!-- Info -->
+                            <VerticalStackLayout
+                                Grid.Column="1"
+                                VerticalOptions="Center"
+                                Spacing="3">
+                                <Label
+                                    Text="{Binding Make}"
+                                    FontSize="11"
+                                    FontAttributes="Bold"
+                                    TextColor="#6C63FF"
+                                    CharacterSpacing="1.5"
+                                    TextTransform="Uppercase" />
+                                <Label
+                                    Text="{Binding Model}"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    TextColor="#FFFFFF" />
+                                <Label
+                                    Text="{Binding LicensePlate}"
+                                    FontSize="13"
+                                    TextColor="#8A8FA8" />
+                            </VerticalStackLayout>
+
+                            <!-- Year chip -->
+                            <Border
+                                Grid.Column="2"
+                                Padding="10,5"
+                                StrokeThickness="1"
+                                Stroke="#2E3456"
+                                StrokeShape="RoundRectangle 8"
+                                VerticalOptions="Center">
+                                <Label
+                                    Text="{Binding Year}"
+                                    FontSize="13"
+                                    FontAttributes="Bold"
+                                    TextColor="#8A8FA8" />
+                            </Border>
+                        </Grid>
+
+                        <!-- Tap gesture -->
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:VehiclesViewModel}}, Path=GoToDetailsCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <!-- Add Button -->
+        <Border
+            Grid.Row="1"
+            Margin="20,12,20,32"
+            Padding="0"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 16">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#6C63FF" Offset="0.0" />
+                    <GradientStop Color="#9C6FFF" Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Button
+                Text="＋  Add Vehicle"
+                FontSize="16"
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                Padding="0,18"
+                Command="{Binding AddCarCommand}"
+                IsEnabled="{Binding IsNotBusy}" />
+        </Border>
+    </Grid>
+</ContentPage>

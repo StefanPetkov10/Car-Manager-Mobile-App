@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CarManagerApp.Views.AddVehiclePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CarManagerApp.ViewModels"
+    x:DataType="viewmodels:AddVehicleViewModel"
+    Title="{Binding Title}"
+    BackgroundColor="#0F1117">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24,20" Spacing="24">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="6" Margin="0,8,0,0">
+                <Label
+                    Text="New Vehicle"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="#FFFFFF" />
+                <Label
+                    Text="Enter your car's details below"
+                    FontSize="14"
+                    TextColor="#8A8FA8" />
+            </VerticalStackLayout>
+
+            <!-- Form Card -->
+            <Border
+                Padding="20"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 20"
+                BackgroundColor="#1E2235">
+
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Make -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="MAKE" FontSize="11" FontAttributes="Bold"
+                               TextColor="#6C63FF" CharacterSpacing="1.5" />
+                        <Border
+                            Padding="14,0"
+                            StrokeThickness="1"
+                            Stroke="#2E3456"
+                            StrokeShape="RoundRectangle 12"
+                            BackgroundColor="#252A40">
+                            <Entry
+                                Text="{Binding Make}"
+                                Placeholder="e.g. Toyota"
+                                PlaceholderColor="#5A6080"
+                                TextColor="#FFFFFF"
+                                FontSize="15"
+                                BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Model -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="MODEL" FontSize="11" FontAttributes="Bold"
+                               TextColor="#6C63FF" CharacterSpacing="1.5" />
+                        <Border
+                            Padding="14,0"
+                            StrokeThickness="1"
+                            Stroke="#2E3456"
+                            StrokeShape="RoundRectangle 12"
+                            BackgroundColor="#252A40">
+                            <Entry
+                                Text="{Binding Model}"
+                                Placeholder="e.g. Corolla"
+                                PlaceholderColor="#5A6080"
+                                TextColor="#FFFFFF"
+                                FontSize="15"
+                                BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Year & License Plate row -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="14">
+
+                        <VerticalStackLayout Grid.Column="0" Spacing="6">
+                            <Label Text="YEAR" FontSize="11" FontAttributes="Bold"
+                                   TextColor="#6C63FF" CharacterSpacing="1.5" />
+                            <Border
+                                Padding="14,0"
+                                StrokeThickness="1"
+                                Stroke="#2E3456"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="#252A40">
+                                <Entry
+                                    Text="{Binding YearText}"
+                                    Placeholder="2020"
+                                    PlaceholderColor="#5A6080"
+                                    TextColor="#FFFFFF"
+                                    FontSize="15"
+                                    Keyboard="Numeric"
+                                    BackgroundColor="Transparent" />
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1" Spacing="6">
+                            <Label Text="LICENSE PLATE" FontSize="11" FontAttributes="Bold"
+                                   TextColor="#6C63FF" CharacterSpacing="1.5" />
+                            <Border
+                                Padding="14,0"
+                                StrokeThickness="1"
+                                Stroke="#2E3456"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="#252A40">
+                                <Entry
+                                    Text="{Binding LicensePlate}"
+                                    Placeholder="AB 1234 CD"
+                                    PlaceholderColor="#5A6080"
+                                    TextColor="#FFFFFF"
+                                    FontSize="15"
+                                    BackgroundColor="Transparent" />
+                            </Border>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <!-- Initial Odometer -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="INITIAL ODOMETER (km)" FontSize="11" FontAttributes="Bold"
+                               TextColor="#6C63FF" CharacterSpacing="1.5" />
+                        <Border
+                            Padding="14,0"
+                            StrokeThickness="1"
+                            Stroke="#2E3456"
+                            StrokeShape="RoundRectangle 12"
+                            BackgroundColor="#252A40">
+                            <Entry
+                                Text="{Binding InitialOdometerText}"
+                                Placeholder="0"
+                                PlaceholderColor="#5A6080"
+                                TextColor="#FFFFFF"
+                                FontSize="15"
+                                Keyboard="Numeric"
+                                BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Save Button -->
+            <Border
+                Padding="0"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#6C63FF" Offset="0.0" />
+                        <GradientStop Color="#9C6FFF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button
+                    Text="Save Vehicle"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    Padding="0,18"
+                    Command="{Binding SaveVehicleCommand}"
+                    IsEnabled="{Binding IsNotBusy}" />
+            </Border>
+
+            <!-- Activity Indicator -->
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                Color="#6C63FF"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

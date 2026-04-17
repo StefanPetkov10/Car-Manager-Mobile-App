@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CarManagerApp.Views.VehicleDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CarManagerApp.ViewModels"
+    xmlns:models="clr-namespace:CarManagerApp.Models"
+    x:DataType="viewmodels:VehicleDetailViewModel"
+    Title="{Binding Title}"
+    BackgroundColor="#0F1117">
+
+    <Grid RowDefinitions="*, Auto">
+
+        <!-- Loading -->
+        <ActivityIndicator
+            Grid.Row="0"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="#6C63FF"
+            HorizontalOptions="Center"
+            VerticalOptions="Center" />
+
+        <CollectionView
+            Grid.Row="0"
+            ItemsSource="{Binding FuelRecords}"
+            SelectionMode="None"
+            IsVisible="{Binding IsNotBusy}">
+
+            <!-- Stats Header -->
+            <CollectionView.Header>
+                <VerticalStackLayout Padding="20,24" Spacing="16">
+
+                    <!-- Average Consumption Card -->
+                    <Border
+                        Padding="20"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 20">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="#6C63FF" Offset="0.0" />
+                                <GradientStop Color="#9C6FFF" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <VerticalStackLayout Spacing="6">
+                            <Label
+                                Text="AVERAGE CONSUMPTION"
+                                FontSize="11"
+                                FontAttributes="Bold"
+                                TextColor="#D0CCFF"
+                                CharacterSpacing="1.5" />
+                            <Label
+                                Text="{Binding AverageFuelConsumption, StringFormat='{0:F2} л/100 км'}"
+                                FontSize="36"
+                                FontAttributes="Bold"
+                                TextColor="#FFFFFF" />
+                            <Label
+                                Text="Based on full-tank fill-ups only"
+                                FontSize="12"
+                                TextColor="#D0CCFF" />
+                        </VerticalStackLayout>
+                    </Border>
+
+                    <!-- Section Title -->
+                    <Label
+                        Text="Fuel History"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="#FFFFFF"
+                        Margin="0,8,0,0" />
+                </VerticalStackLayout>
+            </CollectionView.Header>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Spacing="10"
+                    Padding="40">
+                    <Label Text="⛽" FontSize="48" HorizontalOptions="Center" />
+                    <Label
+                        Text="No fuel records yet"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#FFFFFF"
+                        HorizontalOptions="Center" />
+                    <Label
+                        Text="Tap the button below after your next fill-up."
+                        FontSize="13"
+                        TextColor="#8A8FA8"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:FuelRecord">
+                    <Border
+                        Margin="20,0"
+                        Padding="18"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 16"
+                        BackgroundColor="#1E2235">
+
+                        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto" RowSpacing="6">
+
+                            <!-- Date -->
+                            <Label
+                                Grid.Row="0" Grid.Column="0"
+                                Text="{Binding Date, StringFormat='{0:dd MMM yyyy}'}"
+                                FontSize="13"
+                                FontAttributes="Bold"
+                                TextColor="#6C63FF" />
+
+                            <!-- Full tank badge -->
+                            <Border
+                                Grid.Row="0" Grid.Column="1"
+                                Padding="10,3"
+                                StrokeThickness="0"
+                                StrokeShape="RoundRectangle 6"
+                                BackgroundColor="#2E3456"
+                                IsVisible="{Binding IsFullTank}">
+                                <Label
+                                    Text="Full Tank"
+                                    FontSize="11"
+                                    TextColor="#6C63FF"
+                                    FontAttributes="Bold" />
+                            </Border>
+
+                            <!-- Liters & Price -->
+                            <HorizontalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="18">
+                                <VerticalStackLayout Spacing="2">
+                                    <Label Text="Liters" FontSize="11" TextColor="#8A8FA8" />
+                                    <Label
+                                        Text="{Binding Liters, StringFormat='{0:F2} L'}"
+                                        FontSize="16"
+                                        FontAttributes="Bold"
+                                        TextColor="#FFFFFF" />
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Spacing="2">
+                                    <Label Text="Price/L" FontSize="11" TextColor="#8A8FA8" />
+                                    <Label
+                                        Text="{Binding PricePerLiter, StringFormat='{0:F3} лв.'}"
+                                        FontSize="16"
+                                        FontAttributes="Bold"
+                                        TextColor="#FFFFFF" />
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Spacing="2">
+                                    <Label Text="Total" FontSize="11" TextColor="#8A8FA8" />
+                                    <Label
+                                        Text="{Binding TotalCost, StringFormat='{0:F2} лв.'}"
+                                        FontSize="16"
+                                        FontAttributes="Bold"
+                                        TextColor="#9C6FFF" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+
+                            <!-- Odometer -->
+                            <Label
+                                Grid.Row="2" Grid.ColumnSpan="2"
+                                Text="{Binding Odometer, StringFormat='📍 {0:N0} km'}"
+                                FontSize="13"
+                                TextColor="#8A8FA8" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+        <!-- Add Fuel Button -->
+        <Border
+            Grid.Row="1"
+            Margin="20,12,20,32"
+            Padding="0"
+            StrokeThickness="0"
+            StrokeShape="RoundRectangle 16">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="#6C63FF" Offset="0.0" />
+                    <GradientStop Color="#9C6FFF" Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Button
+                Text="⛽  Add Fuel Record"
+                FontSize="16"
+                FontAttributes="Bold"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                Padding="0,18"
+                IsEnabled="{Binding IsNotBusy}"
+                Clicked="OnAddFuelClicked" />
+        </Border>
+    </Grid>
+</ContentPage>

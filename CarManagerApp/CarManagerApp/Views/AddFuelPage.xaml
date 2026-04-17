@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CarManagerApp.Views.AddFuelPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CarManagerApp.ViewModels"
+    x:DataType="viewmodels:AddFuelViewModel"
+    Title="{Binding Title}"
+    BackgroundColor="#0F1117">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24,20" Spacing="24">
+
+            <!-- Header -->
+            <VerticalStackLayout Spacing="6" Margin="0,8,0,0">
+                <Label
+                    Text="Fuel Record"
+                    FontSize="28"
+                    FontAttributes="Bold"
+                    TextColor="#FFFFFF" />
+                <Label
+                    Text="Log your latest fill-up"
+                    FontSize="14"
+                    TextColor="#8A8FA8" />
+            </VerticalStackLayout>
+
+            <!-- Form Card -->
+            <Border
+                Padding="20"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 20"
+                BackgroundColor="#1E2235">
+
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Date -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="DATE" FontSize="11" FontAttributes="Bold"
+                               TextColor="#6C63FF" CharacterSpacing="1.5" />
+                        <Border
+                            Padding="14,4"
+                            StrokeThickness="1"
+                            Stroke="#2E3456"
+                            StrokeShape="RoundRectangle 12"
+                            BackgroundColor="#252A40">
+                            <DatePicker
+                                Date="{Binding Date}"
+                                TextColor="#FFFFFF"
+                                Format="dd MMMM yyyy"
+                                BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Odometer -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="ODOMETER (km)" FontSize="11" FontAttributes="Bold"
+                               TextColor="#6C63FF" CharacterSpacing="1.5" />
+                        <Border
+                            Padding="14,0"
+                            StrokeThickness="1"
+                            Stroke="#2E3456"
+                            StrokeShape="RoundRectangle 12"
+                            BackgroundColor="#252A40">
+                            <Entry
+                                Text="{Binding OdometerText}"
+                                Placeholder="e.g. 85000"
+                                PlaceholderColor="#5A6080"
+                                TextColor="#FFFFFF"
+                                FontSize="15"
+                                Keyboard="Numeric"
+                                BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Liters & Price row -->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="14">
+
+                        <VerticalStackLayout Grid.Column="0" Spacing="6">
+                            <Label Text="LITERS" FontSize="11" FontAttributes="Bold"
+                                   TextColor="#6C63FF" CharacterSpacing="1.5" />
+                            <Border
+                                Padding="14,0"
+                                StrokeThickness="1"
+                                Stroke="#2E3456"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="#252A40">
+                                <Entry
+                                    Text="{Binding LitersText}"
+                                    Placeholder="40.00"
+                                    PlaceholderColor="#5A6080"
+                                    TextColor="#FFFFFF"
+                                    FontSize="15"
+                                    Keyboard="Numeric"
+                                    BackgroundColor="Transparent" />
+                            </Border>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1" Spacing="6">
+                            <Label Text="PRICE / LITER" FontSize="11" FontAttributes="Bold"
+                                   TextColor="#6C63FF" CharacterSpacing="1.5" />
+                            <Border
+                                Padding="14,0"
+                                StrokeThickness="1"
+                                Stroke="#2E3456"
+                                StrokeShape="RoundRectangle 12"
+                                BackgroundColor="#252A40">
+                                <Entry
+                                    Text="{Binding PricePerLiterText}"
+                                    Placeholder="2.150"
+                                    PlaceholderColor="#5A6080"
+                                    TextColor="#FFFFFF"
+                                    FontSize="15"
+                                    Keyboard="Numeric"
+                                    BackgroundColor="Transparent" />
+                            </Border>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <!-- Station Name -->
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="STATION NAME (optional)" FontSize="11" FontAttributes="Bold"
+                               TextColor="#6C63FF" CharacterSpacing="1.5" />
+                        <Border
+                            Padding="14,0"
+                            StrokeThickness="1"
+                            Stroke="#2E3456"
+                            StrokeShape="RoundRectangle 12"
+                            BackgroundColor="#252A40">
+                            <Entry
+                                Text="{Binding StationName}"
+                                Placeholder="e.g. Lukoil Sofia"
+                                PlaceholderColor="#5A6080"
+                                TextColor="#FFFFFF"
+                                FontSize="15"
+                                BackgroundColor="Transparent" />
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Toggles -->
+                    <Border
+                        Padding="16"
+                        StrokeThickness="1"
+                        Stroke="#2E3456"
+                        StrokeShape="RoundRectangle 14"
+                        BackgroundColor="#252A40">
+                        <VerticalStackLayout Spacing="16">
+
+                            <!-- Full tank -->
+                            <Grid ColumnDefinitions="*,Auto">
+                                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                    <Label Text="Full Tank" FontSize="15" TextColor="#FFFFFF" FontAttributes="Bold" />
+                                    <Label Text="Tank was filled completely" FontSize="12" TextColor="#8A8FA8" />
+                                </VerticalStackLayout>
+                                <Switch
+                                    Grid.Column="1"
+                                    IsToggled="{Binding IsFullTank}"
+                                    OnColor="#6C63FF"
+                                    VerticalOptions="Center" />
+                            </Grid>
+
+                            <BoxView HeightRequest="1" Color="#2E3456" />
+
+                            <!-- Missed record -->
+                            <Grid ColumnDefinitions="*,Auto">
+                                <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                    <Label Text="Missed Previous Record" FontSize="15" TextColor="#FFFFFF" FontAttributes="Bold" />
+                                    <Label Text="Data gap — won't affect consumption calc" FontSize="12" TextColor="#8A8FA8" />
+                                </VerticalStackLayout>
+                                <Switch
+                                    Grid.Column="1"
+                                    IsToggled="{Binding MissedPreviousRecord}"
+                                    OnColor="#FF6B6B"
+                                    VerticalOptions="Center" />
+                            </Grid>
+
+                        </VerticalStackLayout>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Save Button -->
+            <Border
+                Padding="0"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 16">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#6C63FF" Offset="0.0" />
+                        <GradientStop Color="#9C6FFF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button
+                    Text="Save Fuel Record"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    Padding="0,18"
+                    Command="{Binding SaveFuelRecordCommand}"
+                    IsEnabled="{Binding IsNotBusy}" />
+            </Border>
+
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                Color="#6C63FF"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
