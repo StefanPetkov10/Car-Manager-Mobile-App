@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarManagerApp</name>
+    </assembly>
+    <members>
+        <member name="T:CarManagerApp.ViewModels.AddFuelViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.VehicleId">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.vehicleId"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.Date">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.date"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.LitersText">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.litersText"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.PricePerLiterText">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.pricePerLiterText"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.OdometerText">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.odometerText"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.IsFullTank">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.isFullTank"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.MissedPreviousRecord">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.missedPreviousRecord"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.StationName">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddFuelViewModel.stationName"/>
+        </member>
+        <member name="F:CarManagerApp.ViewModels.AddFuelViewModel.saveFuelRecordCommand">
+            <summary>The backing field for <see cref="P:CarManagerApp.ViewModels.AddFuelViewModel.SaveFuelRecordCommand"/>.</summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddFuelViewModel.SaveFuelRecordCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CarManagerApp.ViewModels.AddFuelViewModel.SaveFuelRecordAsync"/>.</summary>
+        </member>
+        <member name="T:CarManagerApp.ViewModels.AddVehicleViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddVehicleViewModel.Make">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddVehicleViewModel.make"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddVehicleViewModel.Model">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddVehicleViewModel.model"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddVehicleViewModel.YearText">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddVehicleViewModel.yearText"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddVehicleViewModel.LicensePlate">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddVehicleViewModel.licensePlate"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddVehicleViewModel.InitialOdometerText">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.AddVehicleViewModel.initialOdometerText"/>
+        </member>
+        <member name="F:CarManagerApp.ViewModels.AddVehicleViewModel.saveVehicleCommand">
+            <summary>The backing field for <see cref="P:CarManagerApp.ViewModels.AddVehicleViewModel.SaveVehicleCommand"/>.</summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.AddVehicleViewModel.SaveVehicleCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CarManagerApp.ViewModels.AddVehicleViewModel.SaveVehicleAsync"/>.</summary>
+        </member>
+        <member name="T:CarManagerApp.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="T:CarManagerApp.ViewModels.VehicleDetailViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:CarManagerApp.ViewModels.VehicleDetailViewModel.CalculateAverageConsumption">
+            <summary>
+            Calculates average fuel consumption in L/100km.
+            Requires at least 2 fuel records. Skips records where
+            MissedPreviousRecord is true (broken odometer chain).
+            </summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.VehicleDetailViewModel.Vehicle">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.VehicleDetailViewModel.vehicle"/>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.VehicleDetailViewModel.AverageFuelConsumption">
+            <inheritdoc cref="F:CarManagerApp.ViewModels.VehicleDetailViewModel.averageFuelConsumption"/>
+        </member>
+        <member name="M:CarManagerApp.ViewModels.VehicleDetailViewModel.OnVehicleChanged(CarManagerApp.Models.Vehicle)">
+            <summary>Executes the logic for when <see cref="P:CarManagerApp.ViewModels.VehicleDetailViewModel.Vehicle"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CarManagerApp.ViewModels.VehicleDetailViewModel.Vehicle"/> is changed.</remarks>
+        </member>
+        <member name="F:CarManagerApp.ViewModels.VehicleDetailViewModel.loadDataCommand">
+            <summary>The backing field for <see cref="P:CarManagerApp.ViewModels.VehicleDetailViewModel.LoadDataCommand"/>.</summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.VehicleDetailViewModel.LoadDataCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CarManagerApp.ViewModels.VehicleDetailViewModel.LoadDataAsync"/>.</summary>
+        </member>
+        <member name="T:CarManagerApp.ViewModels.VehiclesViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:CarManagerApp.ViewModels.VehiclesViewModel.loadCarsCommand">
+            <summary>The backing field for <see cref="P:CarManagerApp.ViewModels.VehiclesViewModel.LoadCarsCommand"/>.</summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.VehiclesViewModel.LoadCarsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CarManagerApp.ViewModels.VehiclesViewModel.LoadCarsAsync"/>.</summary>
+        </member>
+        <member name="F:CarManagerApp.ViewModels.VehiclesViewModel.addCarCommand">
+            <summary>The backing field for <see cref="P:CarManagerApp.ViewModels.VehiclesViewModel.AddCarCommand"/>.</summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.VehiclesViewModel.AddCarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CarManagerApp.ViewModels.VehiclesViewModel.AddCarAsync"/>.</summary>
+        </member>
+        <member name="F:CarManagerApp.ViewModels.VehiclesViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:CarManagerApp.ViewModels.VehiclesViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:CarManagerApp.ViewModels.VehiclesViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:CarManagerApp.ViewModels.VehiclesViewModel.GoToDetailsAsync(CarManagerApp.Models.Vehicle)"/>.</summary>
+        </member>
+        <member name="T:CarManagerApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.VehicleId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "VehicleId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LitersText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LitersText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PricePerLiterText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PricePerLiterText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OdometerText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OdometerText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsFullTank">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsFullTank" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MissedPreviousRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MissedPreviousRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StationName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StationName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Make">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Make" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Model">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Model" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.YearText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "YearText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LicensePlate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LicensePlate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.InitialOdometerText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "InitialOdometerText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Vehicle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Vehicle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasFuelData">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasFuelData" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AverageFuelConsumption">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AverageFuelConsumption" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.VehicleId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "VehicleId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Date">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Date" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LitersText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LitersText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PricePerLiterText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PricePerLiterText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OdometerText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OdometerText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsFullTank">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsFullTank" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MissedPreviousRecord">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MissedPreviousRecord" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StationName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StationName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Make">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Make" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Model">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Model" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.YearText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "YearText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LicensePlate">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LicensePlate" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.InitialOdometerText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "InitialOdometerText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsNotBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsNotBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Vehicle">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Vehicle" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasFuelData">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasFuelData" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AverageFuelConsumption">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AverageFuelConsumption" generated properties.</summary>
+        </member>
+    </members>
+</doc>

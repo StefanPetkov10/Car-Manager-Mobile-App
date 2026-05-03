@@ -21,7 +21,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CarManagerApp
-build_property.ProjectDir = D:\Mobile App\CarManagerApp\CarManagerApp\
+build_property.ProjectDir = D:\GitHub\Car-Manager-Mobile-App\CarManagerApp\CarManagerApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotExportsEnabled = 
@@ -33,7 +33,7 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/App.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
@@ -43,7 +43,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/AppShell.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
@@ -53,7 +53,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/MainPage.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
@@ -63,7 +63,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/Resources/Styles/Colors.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
@@ -73,7 +73,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/Resources/Styles/Styles.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
@@ -83,7 +83,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/Views/AddFuelPage.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/Views/AddFuelPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.Views.AddFuelPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AddFuelPage.xaml
@@ -93,7 +93,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/Views/AddVehiclePage.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/Views/AddVehiclePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.Views.AddVehiclePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AddVehiclePage.xaml
@@ -103,7 +103,7 @@ build_metadata.AdditionalFiles.NoWarn =
 build_metadata.AdditionalFiles.EnableDiagnostics = 
 build_metadata.AdditionalFiles.LineInfo = 
 
-[D:/Mobile App/CarManagerApp/CarManagerApp/Views/VehicleDetailPage.xaml]
+[D:/GitHub/Car-Manager-Mobile-App/CarManagerApp/CarManagerApp/Views/VehicleDetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CarManagerApp.Views.VehicleDetailPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\VehicleDetailPage.xaml

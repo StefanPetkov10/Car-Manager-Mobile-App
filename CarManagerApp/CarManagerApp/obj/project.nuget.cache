@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "22SOjv0cT0o=",
+  "dgSpecHash": "xBTHQMG4BuA=",
   "success": true,
-  "projectFilePath": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj",
+  "projectFilePath": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj",
   "expectedPackageFiles": [
     "D:\\NuGet\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
     "D:\\NuGet\\packages\\googlegson\\2.13.1.1\\googlegson.2.13.1.1.nupkg.sha512",

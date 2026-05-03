@@ -1,0 +1,15 @@
+<api>
+  <jcw-types>
+    <type name="MainActivity" package="crc64e2ca3a69176bbbdc" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6488302ad6e9e4df1a.MauiAppCompatActivity" partial_assembly_qualified_name="CarManagerApp.MainActivity, CarManagerApp">
+      <constructors>
+        <constructor name="MainActivity" method="n_.ctor:()V:" jni_signature="()V" managed_parameters="" retval="void" is_dynamically_registered="True" />
+        <constructor name="MainActivity" method="n_.ctor:(I)V:" jni_signature="(I)V" managed_parameters="System.Int32, System.Private.CoreLib" params="int p0" retval="void" is_dynamically_registered="True" super_call="p0" activate_call="p0" />
+      </constructors>
+    </type>
+    <type name="MainApplication" package="crc64e2ca3a69176bbbdc" application_java_class="android.app.Application" mono_runtime_initialization="mono.MonoPackageManager.LoadApplication (context);" extends_type="crc6488302ad6e9e4df1a.MauiApplication" is_application="True" partial_assembly_qualified_name="CarManagerApp.MainApplication, CarManagerApp" application_constructor="MainApplication" />
+  </jcw-types>
+  <acw-types partial-assembly-name="CarManagerApp" module-name="CarManagerApp.dll">
+    <type assembly-qualified-name="CarManagerApp.MainActivity, CarManagerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="carmanagerapp.MainActivity" java-key="crc64e2ca3a69176bbbdc.MainActivity" managed-key="CarManagerApp.MainActivity" partial-assembly-qualified-name="CarManagerApp.MainActivity, CarManagerApp" />
+    <type assembly-qualified-name="CarManagerApp.MainApplication, CarManagerApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" compat-jni-name="carmanagerapp.MainApplication" java-key="crc64e2ca3a69176bbbdc.MainApplication" managed-key="CarManagerApp.MainApplication" partial-assembly-qualified-name="CarManagerApp.MainApplication, CarManagerApp" />
+  </acw-types>
+</api>

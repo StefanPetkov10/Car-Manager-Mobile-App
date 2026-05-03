@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj": {}
+    "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj": {}
   },
   "projects": {
-    "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj": {
+    "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj",
+        "projectUniqueName": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj",
         "projectName": "CarManagerApp",
-        "projectPath": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj",
+        "projectPath": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\CarManagerApp.csproj",
         "packagesPath": "D:\\NuGet\\packages",
-        "outputPath": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\obj\\",
+        "outputPath": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

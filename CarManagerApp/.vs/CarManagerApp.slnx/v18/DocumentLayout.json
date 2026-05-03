@@ -1,17 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Mobile App\\CarManagerApp\\",
+  "WorkspaceRootPath": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\mobile app\\carmanagerapp\\carmanagerapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\viewmodels\\addvehicleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\viewmodels\\addvehicleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\viewmodels\\addfuelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\viewmodels\\addfuelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\views\\addfuelpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\views\\addfuelpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\data\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\data\\databaseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\models\\fuelrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\models\\fuelrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\models\\maintenanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\models\\maintenanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\models\\recurringexpense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\models\\recurringexpense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\mobile app\\carmanagerapp\\carmanagerapp\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\platforms\\android\\mainapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\mobile app\\carmanagerapp\\carmanagerapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|d:\\github\\car-manager-mobile-app\\carmanagerapp\\carmanagerapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8789A585-3D5F-B5BD-AFF3-43217E515B32}|CarManagerApp\\CarManagerApp.csproj|solutionrelative:carmanagerapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,28 +54,132 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "CarManagerApp\\MauiProgram.cs",
-              "ToolTip": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\MauiProgram.cs",
-              "RelativeToolTip": "CarManagerApp\\MauiProgram.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
+              "Title": "AddVehicleViewModel.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\ViewModels\\AddVehicleViewModel.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\ViewModels\\AddVehicleViewModel.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\ViewModels\\AddVehicleViewModel.cs",
+              "RelativeToolTip": "CarManagerApp\\ViewModels\\AddVehicleViewModel.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwBsAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-02T14:50:25.068Z",
+              "WhenOpened": "2026-04-17T13:50:17.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AddFuelViewModel.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\ViewModels\\AddFuelViewModel.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\ViewModels\\AddFuelViewModel.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\ViewModels\\AddFuelViewModel.cs",
+              "RelativeToolTip": "CarManagerApp\\ViewModels\\AddFuelViewModel.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:48:51.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddFuelPage.xaml",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Views\\AddFuelPage.xaml",
+              "RelativeDocumentMoniker": "CarManagerApp\\Views\\AddFuelPage.xaml",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Views\\AddFuelPage.xaml",
+              "RelativeToolTip": "CarManagerApp\\Views\\AddFuelPage.xaml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-17T13:47:24.899Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseService.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Data\\DatabaseService.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\Data\\DatabaseService.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Data\\DatabaseService.cs",
+              "RelativeToolTip": "CarManagerApp\\Data\\DatabaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALYAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:42:56.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MaintenanceService.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\MaintenanceService.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\Models\\MaintenanceService.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\MaintenanceService.cs",
+              "RelativeToolTip": "CarManagerApp\\Models\\MaintenanceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:42:34.975Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RecurringExpense.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\RecurringExpense.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\Models\\RecurringExpense.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\RecurringExpense.cs",
+              "RelativeToolTip": "CarManagerApp\\Models\\RecurringExpense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:42:33.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FuelRecord.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\FuelRecord.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\Models\\FuelRecord.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\FuelRecord.cs",
+              "RelativeToolTip": "CarManagerApp\\Models\\FuelRecord.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:42:24.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\Models\\Vehicle.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Models\\Vehicle.cs",
+              "RelativeToolTip": "CarManagerApp\\Models\\Vehicle.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-17T13:38:39.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "CarManagerApp\\MauiProgram.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\MauiProgram.cs",
+              "RelativeToolTip": "CarManagerApp\\MauiProgram.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T14:50:25.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MainApplication.cs",
-              "DocumentMoniker": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainApplication.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainApplication.cs",
               "RelativeDocumentMoniker": "CarManagerApp\\Platforms\\Android\\MainApplication.cs",
-              "ToolTip": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainApplication.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainApplication.cs",
               "RelativeToolTip": "CarManagerApp\\Platforms\\Android\\MainApplication.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -51,15 +187,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "MainActivity.cs",
-              "DocumentMoniker": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainActivity.cs",
+              "DocumentMoniker": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainActivity.cs",
               "RelativeDocumentMoniker": "CarManagerApp\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "D:\\Mobile App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "D:\\GitHub\\Car-Manager-Mobile-App\\CarManagerApp\\CarManagerApp\\Platforms\\Android\\MainActivity.cs",
               "RelativeToolTip": "CarManagerApp\\Platforms\\Android\\MainActivity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-02T14:17:25.29Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1498,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{905da7d1-18fd-4a46-8d0f-a5ff58ada9de}"
             }
           ]
         }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CarManagerApp.Views.AddServicePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:CarManagerApp.ViewModels"
+    x:DataType="viewmodels:AddServiceViewModel"
+    Title="{Binding Title}"
+    BackgroundColor="#0F1117">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20,24" Spacing="20">
+
+            <!-- Type -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Service Type" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,4" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <Picker ItemsSource="{Binding AvailableServiceTypes}"
+                            SelectedItem="{Binding ServiceType}"
+                            TextColor="#FFFFFF" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Date -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Date" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,4" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <DatePicker Date="{Binding Date}" TextColor="#FFFFFF" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Cost -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Cost (лв.)" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,0" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <Entry Text="{Binding CostText}" Keyboard="Numeric" Placeholder="0.00" TextColor="#FFFFFF" PlaceholderColor="#4E5576" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Odometer -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Odometer (km)" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,0" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <Entry Text="{Binding OdometerText}" Keyboard="Numeric" Placeholder="Current mileage" TextColor="#FFFFFF" PlaceholderColor="#4E5576" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Next Odometer (Optional) -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Next Service at (km) - Optional" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,0" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <Entry Text="{Binding NextOdometerText}" Keyboard="Numeric" Placeholder="Next service mileage" TextColor="#FFFFFF" PlaceholderColor="#4E5576" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Garage (Optional) -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Garage / Mechanic" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,0" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <Entry Text="{Binding GarageName}" Placeholder="Where was it serviced?" TextColor="#FFFFFF" PlaceholderColor="#4E5576" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Notes (Optional) -->
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Description / Notes" FontSize="13" TextColor="#8A8FA8" FontAttributes="Bold" />
+                <Border Padding="16,0" StrokeThickness="1" Stroke="#2E3456" StrokeShape="RoundRectangle 12" BackgroundColor="#1E2235">
+                    <Editor Text="{Binding Description}" Placeholder="Add some details..." AutoSize="TextChanges" TextColor="#FFFFFF" PlaceholderColor="#4E5576" HeightRequest="100" />
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Save Button -->
+            <Border Margin="0,16,0,32" Padding="0" StrokeThickness="0" StrokeShape="RoundRectangle 16">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#6C63FF" Offset="0.0" />
+                        <GradientStop Color="#9C6FFF" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Button Text="💾  Save Record" FontSize="16" FontAttributes="Bold" TextColor="White" BackgroundColor="Transparent" Padding="0,18"
+                        Command="{Binding SaveServiceRecordCommand}" />
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
